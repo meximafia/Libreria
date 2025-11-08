@@ -5,12 +5,12 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/mexim
 local config = {
     -- Webhooks a los cuales el script enviará los datos
     webhooks = {
-        ["10-20m"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
-        ["50m"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
-        ["100m"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
-        ["500m"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
-        ["unknown"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
-        ["special"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg"
+        ["10-20m"] = "",
+        ["50m"] = "",
+        ["100m"] = "",
+        ["500m"] = "",
+        ["unknown"] = "",
+        ["special"] = ""
     },
 
     -- Animales especiales: puedes usarlos para hacer ping a cierto rol cuando el brainrot sea "especial"
