@@ -1,0 +1,82 @@
+-- Cargar la librería desde GitHub
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lilbrocar7-web/Sab/refs/heads/main/Library.lua.txt"))()
+
+-- Configuración principal
+local config = {
+    -- Webhooks a los cuales el script enviará los datos
+    webhooks = {
+        ["10-20m"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
+        ["50m"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
+        ["100m"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
+        ["500m"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
+        ["unknown"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg",
+        ["special"] = "https://discord.com/api/webhooks/1435712998286164210/cBxK8XRhMFw_z_htLsuJ5ijcedvI2zyQjkOc2AUesNhBELsJOJzdqfQi2xPm-wcjpwZg"
+    },
+
+    -- Animales especiales: puedes usarlos para hacer ping a cierto rol cuando el brainrot sea "especial"
+    specialAnimals = {
+        "Tictac Sahur",
+        "Tralaledon",
+        "Garama and Madundung",
+        "Nuclearo Dinossauro",
+        "Strawberry Elephant",
+        "Ketchuru and Musturu",
+        "Headless Horseman",
+        "Meowl",
+        "Los Spooky Combanasionias",
+        "Los Combinasionas"
+    },
+
+    -- Animales permitidos: estos son los que el script buscará además de los especiales
+    allowedAnimals = {
+        "67",
+        "Celularcini Viciosini",
+        "Dragon Cannelloni",
+        "Esok Sekolah",
+        "Ketupat Kepat",
+        "Mariachi Corazoni",
+        "Money Money Puggy",
+        "Secret Lucky Block",
+        "Spaghetti Tualetti",
+        "Tang Tang Kelentang",
+        "Eviledon",
+        "La Spooky Grande",
+        "Los Bros",
+        "Los Chicleteiras",
+        "Los Hotspotsitos",
+        "Los Nooo My Hotspotsitos",
+        "Los Primos",
+        "Los Mobilis",
+        "Las Sis",
+        "La Grande Combinasion",
+        "La Supreme Combinasion",
+        "La Extinct Grande",
+        "La Secret Combinasion",
+        "Spooky and Pumpky",
+        "Los Lucky Blocks",
+        "Admin Lucky Block",
+        "Burguro And Fryuro",
+        "Chillin Chili",
+        "Los Tacoritas",
+        "Tacorita Bicicleta",
+        "Mieteteira Bicicleteira",
+        "La Casa Boo",
+        "Pot Hotspot"
+    },
+
+    -- Puedes poner tu Blacklist de usuarios aquí
+    blacklistUrl = "https://raw.githubusercontent.com/USUARIO/REPO/main/blacklist.json",
+
+    -- Pings que hará según el brainrot. Puedes usar roles en lugar de @here o @everyone
+    pingRoles = {
+        ["10-20m"] = "@here",
+        ["50m"] = "@here",
+        ["100m"] = "@here",
+        ["500m"] = "@here",
+        ["unknown"] = "@here",
+        ["special"] = "@everyone"
+    }
+}
+
+-- Inicializar la librería con la configuración
+Library.Initialize(config)
