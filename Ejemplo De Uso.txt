@@ -1,5 +1,5 @@
 -- Cargar la librería desde GitHub
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/lilbrocar7-web/Sab/refs/heads/main/Library.lua.txt"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/meximafia/Libreria/refs/heads/main/librer%C3%ADa.lua"))()
 
 -- Configuración principal
 local config = {
