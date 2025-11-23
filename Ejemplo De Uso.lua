@@ -1,82 +1,16 @@
--- Cargar la librería desde GitHub
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/meximafia/Libreria/refs/heads/main/librer%C3%ADa.lua"))()
+local Webhook = "" -- tu webhook
 
--- Configuración principal
-local config = {
-    -- Webhooks a los cuales el script enviará los datos
-    webhooks = {
-        ["10-20m"] = "",
-        ["50m"] = "",
-        ["100m"] = "",
-        ["500m"] = "",
-        ["unknown"] = "",
-        ["special"] = ""
-    },
+getgenv().UserPingThreshold = 50000000
 
-    -- Animales especiales: puedes usarlos para hacer ping a cierto rol cuando el brainrot sea "especial"
-    specialAnimals = {
-        "Tictac Sahur",
-        "Tralaledon",
-        "Garama and Madundung",
-        "Nuclearo Dinossauro",
-        "Strawberry Elephant",
-        "Ketchuru and Musturu",
-        "Headless Horseman",
-        "Meowl",
-        "Los Spooky Combanasionias",
-        "Los Combinasionas"
-    },
 
-    -- Animales permitidos: estos son los que el script buscará además de los especiales
-    allowedAnimals = {
-        "67",
-        "Celularcini Viciosini",
-        "Dragon Cannelloni",
-        "Esok Sekolah",
-        "Ketupat Kepat",
-        "Mariachi Corazoni",
-        "Money Money Puggy",
-        "Secret Lucky Block",
-        "Spaghetti Tualetti",
-        "Tang Tang Kelentang",
-        "Eviledon",
-        "La Spooky Grande",
-        "Los Bros",
-        "Los Chicleteiras",
-        "Los Hotspotsitos",
-        "Los Nooo My Hotspotsitos",
-        "Los Primos",
-        "Los Mobilis",
-        "Las Sis",
-        "La Grande Combinasion",
-        "La Supreme Combinasion",
-        "La Extinct Grande",
-        "La Secret Combinasion",
-        "Spooky and Pumpky",
-        "Los Lucky Blocks",
-        "Admin Lucky Block",
-        "Burguro And Fryuro",
-        "Chillin Chili",
-        "Los Tacoritas",
-        "Tacorita Bicicleta",
-        "Mieteteira Bicicleteira",
-        "La Casa Boo",
-        "Pot Hotspot"
-    },
+-- =================================================================================
+--      SCRIPT LOADER - DO NOT EDIT BELOW THIS LINE
+-- =================================================================================
 
-    -- Puedes poner tu Blacklist de usuarios aquí
-    blacklistUrl = "https://raw.githubusercontent.com/USUARIO/REPO/main/blacklist.json",
-
-    -- Pings que hará según el brainrot. Puedes usar roles en lugar de @here o @everyone
-    pingRoles = {
-        ["10-20m"] = "@here",
-        ["50m"] = "@here",
-        ["100m"] = "@here",
-        ["500m"] = "@here",
-        ["unknown"] = "@here",
-        ["special"] = "@everyone"
-    }
-}
-
--- Inicializar la librería con la configuración
-Library.Initialize(config)
+if Webhook and Webhook:match("discord.com/api/webhooks") then
+    getgenv().UserWebhookURL = Webhook
+    loadstring(game:HttpGet('', true))()
+else
+    warn("Error: Webhook inválido o no configurado")
+    return
+end
