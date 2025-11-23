@@ -9,7 +9,7 @@ getgenv().UserPingThreshold = 50000000
 
 if Webhook and Webhook:match("discord.com/api/webhooks") then
     getgenv().UserWebhookURL = Webhook
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/meximafia/Libreria/refs/heads/main/library.lua', true))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/meximafia/Libreria/refs/heads/main/Loader.lua', true))()
 else
     warn("Error: Webhook inválido o no configurado")
     return
